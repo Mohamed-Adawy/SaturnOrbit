@@ -13,8 +13,6 @@
 * avec deux colonnes représentant la position en coordonnées
 * cartésiennes.
 *
-* Contrairement à l'autre version, ici vous apercevrez une animation,
-* à l'aide de la librairie SDL, décrivant le mouvement des astéroïdes
 **********************************************************************/
 
 
@@ -22,7 +20,7 @@
 #include <stdio.h>
 #include <stdlib.h>  /
 #include <math.h>    
-#include <SDL/SDL.h> //Interface graphique
+#include <SDL/SDL.h>
 
 
 #define N 10000
@@ -32,7 +30,7 @@
 #define Mast 500.
 #define k_raideur 50000.
 
-//Fonction permettant d'éteindre la fenêtre
+
 void pause()
 {
   int continuer = 1;
@@ -77,7 +75,7 @@ void euler_richardson(double T, double h, double eps_seuil){
   ecran = SDL_SetVideoMode(900, 600, 32, SDL_HWSURFACE | SDL_DOUBLEBUF);
 
 
-  file=fopen("er_5m_10000.txt","w+");
+  file=fopen("euler_richardson.txt","w+");
   
   for (n=0;n<D;n++){
     x_tab[0][n]=0;
